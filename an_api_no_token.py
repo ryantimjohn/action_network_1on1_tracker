@@ -4,7 +4,7 @@ import json
 #whenever the term "other" is used, it's to signify the 
 #other person in the one-on-one
 
-#I'd love to put this on a Github but we'd have to remove the API_Token
+#Add Action Network 'OSDI-API-Token' wherever it says "Add 'OSDI-API-Token' here"
 
 def an_post(user_first, user_last, user_email, 
             other_first, other_last, other_email, description):
@@ -65,7 +65,7 @@ def an_put(form_endpoint, other_endpoint,
            user_first, user_last, user_email, 
            other_first, other_last, other_email):
     
-    API_Token = #add 'OSDI-API-Token' here
+    API_Token = #Add 'OSDI-API-Token' here
     
     payload = {	
         "title": "1-on-1: {} {} - {} {} : {}".format(user_first, user_last, 
