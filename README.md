@@ -9,6 +9,7 @@ Web project can be found in the folder titled "web"
 	<ol type="a">
 		<li>Install virtualenv: <code>pip install virtualenv</code></li>
 		<li>Make a directory for virtual environment: <code>mkdir venv</code></li>
+		<li>Create the virtual environment: <code>virtualenv venv</code></li>
 		<li>Activate virtual environement: <code>source venv/bin/activate</code></li>
 	</ol>
 2. Install dependencies: `pip install -r requirements.txt`
