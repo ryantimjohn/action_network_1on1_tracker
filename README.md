@@ -7,13 +7,21 @@ Web project can be found in the folder titled "web"
 
 2. Create virtual environment
 	<ol type="a">
-		<li>Install virtualenv: `pip install virtualenv`</li>
-		<li>Make a directory for virtual environment: `mkdir venv`</li>
-		<li>Activate virtual environement: `source venv/bin/activate`</li>
+		<li>Install virtualenv: <code>pip install virtualenv</code></li>
+		<li>Make a directory for virtual environment: <code>mkdir venv</code></li>
+		<li>Activate virtual environement: <code>source venv/bin/activate</code></li>
 	</ol>
 2. Install dependencies: `pip install -r requirements.txt`
 
 3. Navigate to web project: `cd web`
+
+4. Setup Database
+	<ol type="a">
+		<li>Create a databse on your localhost</li>
+		<li>Edit database configuration in setting.py, modify DATABASES variable</li>
+		<li>Run Migration: <code>python manage.py migrate tracker</code> or <code>python manage.py migrate</code></li>
+	</ol>
+	
 
 4. Run server: `python manage.py runserver`
 

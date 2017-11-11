@@ -1,0 +1,165 @@
+body, html{
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	margin:0;
+}
+body.login{
+	background: #072f43;
+}
+header{
+	background: #072f43;
+	padding: 8px 30px
+}
+main{
+	margin-top: 50px;
+	padding:0 30px;
+}
+.button{
+	border-radius: 3px;
+}
+.logo--large{
+	max-width: 600px;
+	width:90%;
+	display: block;
+	margin:30px auto 0 auto;
+}
+.logo--small{
+	width:250px;
+}
+.form--login{
+	background: #ffffff;
+	max-width: 280px;
+	width:100%;
+	padding:30px 30px 40px 30px;
+	margin:0 auto 0 auto;
+	color:#555;
+}
+.form--login input{
+	border-radius: 3px;
+	font-size: 14px;
+	font-weight: 200;
+	padding: 10px 20px;
+	box-shadow: none;
+	border:none;
+	background-color: #ECF0F1;
+	width:100%;
+	max-width: 240px;
+}
+.form--login label{
+	display: block;
+	text-transform: uppercase;
+	font-size: 10px;
+	margin-bottom: 3px;
+}
+.form--login button{
+	border: 2px solid transparent;
+	background: #ea242f;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 12px;
+	line-height: 25px;
+	padding: 4px 0;
+	text-decoration: none;
+	text-shadow: none;
+	border-radius: 3px;
+	box-shadow: none;
+	transition: 0.25s;
+	display: block;
+	width: 100%;
+	margin: 30px auto 0px auto;
+	cursor: pointer;
+}
+.form--login button:hover,
+.form--login button:focus,
+.form--login button:active{
+	background:#d0131e;
+}
+ul.errorlist{
+	margin-left: 0px;
+	margin-top: 0px;
+	-webkit-padding-start: 0px;
+	padding-start: 0px;
+	font-size: 12px;
+}
+ul.errorlist li{
+	list-style: none;
+	color: #e74c3c;
+}
+ul.menu{
+	color:#ffffff;
+	margin-top: 25px;
+	margin-right: 0px;
+	margin-left: auto;
+	text-align: right;
+}
+ul.menu a{
+	color:#ffffff;
+}
+.menu-text{
+	margin-right: 10px;
+	font-weight: normal !important;
+}
+.menu-badge{
+	background: #ea242f;
+	border-radius: 4px;
+	font-size: 14px;
+}
+#meetings{
+	margin-top:20px; 
+	border-radius: 3px;
+}
+#meetings-table{
+	margin-top: 10px;
+}
+table th{
+	font-size: 14px;
+}
+@media(max-width:640px){
+	ul.menu{
+		margin-top: 25px;
+	}
+	ul.menu a.menu-badge{
+		padding: 9px 21px;
+	}
+	header{
+		padding: 2px 8px;
+	}
+	main{
+		padding:0 10px;
+	}
+}
+@media(max-width:530px){
+	#meetings-table thead{
+		display: none;
+	}
+	#meetings-table tr td:first-child{
+		padding-top:20px;
+	}
+	#meetings-table tr td:last-child{
+		padding-bottom:20px;
+	}
+	#meetings-table td{
+		display: block;
+		padding-top:0px;
+		padding-bottom:0px;
+	}
+	#meetings-table td.date{
+		font-size: 14px;
+		margin-bottom: 5px;
+	}
+	#meetings-table td.name{
+		font-size: 16px;
+		font-weight: bold;
+	}
+}
+@media(max-width:430px){
+	header .cell{
+		width:100% !important;
+	}
+	.right-menu{
+		display: none;
+	}
+	.logo--small{
+		margin:0 auto;
+		display: block;
+	}
+}
