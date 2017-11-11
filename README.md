@@ -21,8 +21,9 @@ Web project can be found in the folder titled "web"
 		<li>Edit database configuration in setting.py, modify DATABASES variable</li>
 		<li>Run Migration: <code>python manage.py migrate tracker</code> or <code>python manage.py migrate</code></li>
 	</ol>
-	
 
-4. Run server: `python manage.py runserver`
+5. Create a super user 	`python manage.py createsuperuser`
+
+6. Run server: `python manage.py runserver`
 
 N.B. To stop running virtual environment run `deactivate`
