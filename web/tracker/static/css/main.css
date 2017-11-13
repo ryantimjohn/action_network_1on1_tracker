@@ -10,11 +10,14 @@ header{
 	padding: 8px 30px
 }
 main{
-	margin-top: 50px;
+	margin-top: 30px;
 	padding:0 30px;
 }
 .button{
 	border-radius: 3px;
+}
+.button.gray{
+	background: #777777 !important;
 }
 .logo--large{
 	max-width: 600px;

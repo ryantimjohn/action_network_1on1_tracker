@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}One on One Tracker{% endblock %}
+
+{% block content %}
+  <div class="grid-container fluid">
+	  <div class="grid-x grid-margin-x">
+	  	<div class="cell small-12">	
+	  		<h1>Create One on One</h1>	
+	  		<form action="/oneonone/create" method="post">
+	  			{% csrf_token %}
+			    <label for="your_name">First Name: </label>
+			    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			    <label for="your_name">Last Name: </label>
+			    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			    <label for="your_name">Email: </label>
+			    <input id="your_name" type="text" name="your_name" value="{{ current_name }}">
+			    <label><input type="checkbox"> Is Your Organizee</label>
+			    <label for="your_name">Notes: </label>
+			    <textarea></textarea>
+			    <a href="/" class="button gray">Cancel</a>
+			    <button class="button" type="submit">Create One On One</button>
+			</form>
+	  	</div>
+	  </div>
+</div>
+
+{% endblock %}

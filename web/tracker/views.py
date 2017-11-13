@@ -13,3 +13,10 @@ def index(request):
 def logout_user(request):
     logout(request)
     return redirect('/login/')
+
+def create_one_on_one(request):
+	if request.method == 'POST':
+		#use validator: https://github.com/pyeve/cerberus
+		return HttpResponse("Create the item")
+	else:	
+		return render(request, 'oneonone/create.html', {})
