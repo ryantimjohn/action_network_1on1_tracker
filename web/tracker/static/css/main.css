@@ -33,8 +33,29 @@ main{
 	max-width: 280px;
 	width:100%;
 	padding:30px 30px 40px 30px;
-	margin:0 auto 0 auto;
+	margin:0 auto 100px auto;
 	color:#555;
+}
+.action-links{
+	text-align: center;
+}
+.action-links a::after{
+	position: relative;
+	content: "•";
+	font-size: 14px;
+	padding-left:5px;
+}
+.action-links a:last-child::after{
+	display: none;
+}
+.small-link{
+	font-size: 11px;
+	margin-top:15px;
+	display: inline-block;
+	text-align: center;
+	color: #555555;
+	text-transform: uppercase;
+	text-decoration: none;
 }
 .form--login input{
 	border-radius: 3px;

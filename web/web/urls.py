@@ -22,6 +22,7 @@ from django.views.generic.base import TemplateView
 urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^login/$', auth_views.login, name='login'),
+    url(r'^register/$', views.register_user, name="signup"),
     url(r'^logout/$', views.logout_user, name='logout'),
     url(r'^oneonone/create$', views.create_one_on_one, name='create_one_on_one'),
     url(r'^admin/', admin.site.urls),
