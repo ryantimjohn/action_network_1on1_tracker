@@ -52,7 +52,7 @@ def create_one_on_one(request):
 		if(errors == []):
 			current_user = request.user
 			#submit one on one data to action network using Tim's script
-			# an_api_wrapper.an_post(current_user.first_name, current_user.last_name, current_user.email, contact_first_name, contact_last_name, contact_email, oneonone_notes)
+			an_response = an_api_wrapper.an_post(current_user.first_name, current_user.last_name, current_user.email, contact_first_name, contact_last_name, contact_email, oneonone_notes)
 
 			#checking if contact exists, if so we use the id of the contact already in the system
 			contact_search = Contact.objects.filter(email=contact_email);
@@ -63,7 +63,7 @@ def create_one_on_one(request):
 				new_contact.save()
 
 			#record one on one in db	
-			new_oneonone = OneOnOne(user=current_user, contact = new_contact, description=oneonone_notes, form_endpoint = '', other_enpoint='')
+			new_oneonone = OneOnOne(user=current_user, contact = new_contact, description=oneonone_notes, form_endpoint = an_response[1], other_enpoint=an_response[2])
 			new_oneonone.save()
 			return redirect('/')
 

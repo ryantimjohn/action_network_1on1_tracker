@@ -27,7 +27,7 @@ Web project can be found in the folder titled "web"
 6. Setup Database
 	<ol type="a">
 		<li>Create a databse on your localhost (like `mysql -u root -e
-'create database oneonone_dev'`)</li>
+'create database oneonone_dev' `)</li>
 		<li>Edit database configuration in `.env`.</li>
 		<li>Run Migration: <code>python manage.py migrate tracker</code> or <code>python manage.py migrate</code></li>
 	</ol>

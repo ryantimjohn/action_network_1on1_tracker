@@ -1,6 +1,6 @@
 import requests
 import json
-
+import os
 #whenever the term "other" is used, it's to signify the 
 #other person in the one-on-one
 
