@@ -28,5 +28,34 @@
 	  	</div>
 	  </div>
 </div>
+{% endblock %}
+{% block bottom_body %}
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script type="text/javascript">
+	 var contacts = [
+	    {% for contact in contacts %}
+	      {
+	        label: '{{contact.first_name}} ' + '{{contact.last_name}}',
+	        value: '{{contact.first_name}}',
+	        last_name: '{{contact.last_name}}',
+	        email: '{{contact.email}}'
+	      },
+	    {% endfor %}
+	];
 
+    $( "#first_name" ).autocomplete({
+      minLength: 0,
+      source: contacts,
+      focus: function( event, ui ) {
+        $( "#first_name" ).val( ui.item.value );
+        return false;
+      },
+      select: function( event, ui ) {
+        $( "#last_name" ).val( ui.item.last_name );
+        $( "#email" ).val( ui.item.email );
+        return false;
+      }
+    });
+</script>
 {% endblock %}

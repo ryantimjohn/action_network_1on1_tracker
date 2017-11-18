@@ -6,6 +6,8 @@ from django.http import HttpResponse
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import logout
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 from models import *
 from forms import *
 import an_api_wrapper
@@ -34,6 +36,7 @@ def register_user(request):
 		form = SignUpForm()
 	return render(request, 'registration/signup.html', {'form': form})
 
+@login_required
 def create_one_on_one(request):
 	if request.method == 'POST':
 		contact_first_name = request.POST.get('first_name', '')
@@ -67,6 +70,8 @@ def create_one_on_one(request):
 			new_oneonone.save()
 			return redirect('/')
 
-		return render(request, 'oneonone/create.html', {'errors': errors, 'form_data': request.POST })
+		contacts = Contact.objects.all()
+		return render(request, 'oneonone/create.html', {'errors': errors, 'form_data': request.POST, 'contacts' : contacts })
 	else:	
-		return render(request, 'oneonone/create.html', {'errors':[], 'form_data': {}})
+		contacts = Contact.objects.all()
+		return render(request, 'oneonone/create.html', {'errors':[], 'form_data': {}, 'contacts' : contacts })

@@ -9,7 +9,7 @@ import json
 def an_post(user_first, user_last, user_email, 
             other_first, other_last, other_email, description):
     
-    API_Token = #Add 'OSDI-API-Token' here
+    API_Token = '25806abf479604a8d7dc8c0b978f012b'
    
     payload = {	
         "title": "1-on-1: {} {} - {} {} : {}".format(user_first, user_last, 
@@ -65,7 +65,7 @@ def an_put(form_endpoint, other_endpoint,
            user_first, user_last, user_email, 
            other_first, other_last, other_email):
     
-    API_Token = #Add 'OSDI-API-Token' here
+    API_Token = '25806abf479604a8d7dc8c0b978f012b'
     
     payload = {	
         "title": "1-on-1: {} {} - {} {} : {}".format(user_first, user_last, 

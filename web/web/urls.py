@@ -24,6 +24,11 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^register/$', views.register_user, name="signup"),
     url(r'^logout/$', views.logout_user, name='logout'),
-    url(r'^oneonone/create$', views.create_one_on_one, name='create_one_on_one'),
+    url(r'^one-on-one/create$', views.create_one_on_one, name='create_one_on_one'),   
+    url(r'^password-reset/$', auth_views.password_reset, name='password_reset'),
+    url(r'^password-reset/done/$', auth_views.password_reset_done, name='password_reset_done'),
+    url(r'^reset/(?P<uidb64>[0-9A-Za-z_\-]+)/(?P<token>[0-9A-Za-z]{1,13}-[0-9A-Za-z]{1,20})/$',
+        auth_views.password_reset_confirm, name='password_reset_confirm'),
+    url(r'^reset/done/$', auth_views.password_reset_complete, name='password_reset_complete'),
     url(r'^admin/', admin.site.urls),
 ]

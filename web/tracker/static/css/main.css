@@ -25,6 +25,9 @@ main{
 	display: block;
 	margin:30px auto 0 auto;
 }
+.password-reset-form ul:not(.errorlist){
+	display: none;
+}
 .logo--small{
 	width:250px;
 }
@@ -35,6 +38,24 @@ main{
 	padding:30px 30px 40px 30px;
 	margin:0 auto 100px auto;
 	color:#555;
+}
+.form--login p{
+	font-weight: 300;
+    line-height: 20px;
+    font-size: 14px;
+}
+.form--login h1{
+	font-weight: 300;
+	font-size: 18px;
+	margin-top: 0px;
+	padding-top: 5px;
+	text-transform: uppercase;
+}
+.form--login a{
+	color: #555555;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 14px;
 }
 .action-links{
 	text-align: center;
@@ -48,7 +69,7 @@ main{
 .action-links a:last-child::after{
 	display: none;
 }
-.small-link{
+a.small-link{
 	font-size: 11px;
 	margin-top:15px;
 	display: inline-block;
@@ -92,10 +113,16 @@ main{
 	margin: 30px auto 0px auto;
 	cursor: pointer;
 }
+.password button{
+	margin: 20px auto 0px auto;
+}
 .form--login button:hover,
 .form--login button:focus,
 .form--login button:active{
 	background:#d0131e;
+}
+textarea{
+	min-height: 150px;
 }
 ul.errorlist{
 	margin-left: 0px;
@@ -185,5 +212,17 @@ table th{
 	.logo--small{
 		margin:0 auto;
 		display: block;
+	}
+}
+@media(max-width:360px){
+	.form--login{
+		width:75%;
+		padding: 30px 20px 40px 20px;
+	}
+	.form--login input{
+		padding: 10px 0px;
+	}
+	.action-links a::after {
+		display: none;
 	}
 }

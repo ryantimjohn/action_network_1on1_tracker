@@ -2,3 +2,6 @@ Django==1.11.7
 MySQL-python==1.2.5
 pytz==2017.3
 python-dotenv==0.7.1
+requests==2.18.4
+urllib3==1.22
+django-smtp-ssl==1.0

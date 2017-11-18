@@ -17,7 +17,7 @@
         <div class="small-5 medium-6 right-menu cell">
           <ul class="menu float-right">
             {% if user.is_authenticated %}
-              <li class="menu-text hide-for-small-only">Hi {{ user.username }}!</li>
+              <li class="menu-text hide-for-small-only">Hi {{ user.first_name }}!</li>
               <li><a href="{% url 'logout' %}" class="menu-badge">Logout</a></li>
             {% else %}
               <li><a href="{% url 'login' %}" class="menu-badge">Login</a></li>
@@ -35,5 +35,7 @@
   <script src="{% static 'js/vendor/what-input.js' %}"></script>
   <script src="{% static 'js/vendor/foundation.js' %}"></script>
   <script src="{% static 'js/app.js' %}"></script>
+  {% block bottom_body %}
+  {% endblock %}
 </body>
 </html>

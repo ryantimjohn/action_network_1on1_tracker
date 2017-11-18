@@ -10,7 +10,7 @@
   <header>
   </header>
   <main>
-  	  <img src="{% static 'images/TPL-Reclaim-Logos_BG-navy.png' %}" alt="Reclaim Chicago and The People's Lobby Logos" class="logo--large">
+  	  <a href="/"><img src="{% static 'images/TPL-Reclaim-Logos_BG-navy.png' %}" alt="Reclaim Chicago and The People's Lobby Logos" class="logo--large"></a>
   	  <div class='form--login'>
 		  <form method="post">
 		    {% csrf_token %}
@@ -18,7 +18,7 @@
 		    <button type="submit">Login</button>
         <div class='action-links'>
           <a href="/register" class="small-link">Register</a>
-          <a href="/register" class="small-link">Forgot Password</a>
+          <a href="/password-reset" class="small-link">Forgot Password?</a>
         </div>
 		  </form>
   	  </div>
