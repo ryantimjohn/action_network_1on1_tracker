@@ -12,7 +12,7 @@
 			    	<p>{{error}}</p>
 			    {% endfor %}
 	  		</div>	
-	  		<form action="/oneonone/create" method="post">
+	  		<form action="/one-on-one/create" method="post">
 	  			{% csrf_token %}
 			    <label for="first_name">First Name: </label>
 			    <input id="first_name" type="text" name="first_name" value="{{ form_data.first_name }}" required>

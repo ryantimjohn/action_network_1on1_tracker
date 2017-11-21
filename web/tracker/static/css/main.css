@@ -164,6 +164,17 @@ ul.menu a{
 table th{
 	font-size: 14px;
 }
+.errors{
+	background: #C0392B;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.errors p{
+	margin-bottom: 0px;
+	color: #ffffff;
+}
 @media(max-width:640px){
 	ul.menu{
 		margin-top: 25px;
