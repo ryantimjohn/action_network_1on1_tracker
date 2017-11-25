@@ -12,8 +12,8 @@ class Contact(models.Model):
 	
 #Join Table
 class OneOnOne(models.Model):
-	user = models.ForeignKey(User, null=True)
-	contact = models.ForeignKey(Contact, null=True)
+	user = models.ForeignKey(User, to_field='id', null=True)
+	contact = models.ForeignKey(Contact, to_field='id', null=True)
 	description = models.TextField(blank=True, null=True)
 	form_endpoint = models.URLField(max_length=2083)
 	other_enpoint = models.URLField(max_length=2083)
