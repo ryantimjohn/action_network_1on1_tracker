@@ -196,6 +196,23 @@ a.sort{
 table th{
 	font-size: 14px;
 }
+table tr td{
+	outline: 0;
+	cursor: pointer;
+}
+table tr td:last-child{
+	cursor: auto;
+}
+table tr{
+	outline: 0;
+	transition:background .3s ease-in-out;
+}
+table tbody tr:hover{
+	background: #ecf7fb !important;
+}
+table tbody tr:nth-child(even){
+	background: #fafafa;
+}
 .errors{
     border-radius: 5px;
     margin-bottom: 15px;
@@ -203,6 +220,17 @@ table th{
 .errors p{
 	margin-bottom: 0px;
 	color: #C0392B;
+}
+.reveal{
+	max-width: 400px;
+	padding:30px;
+}
+.reveal h3{
+	font-size: 24px;
+	font-weight: bold;
+}
+.reveal label{
+	font-weight: bold;
 }
 @media(max-width:640px){
 	ul.menu{
@@ -240,6 +268,18 @@ table th{
 	#meetings-table td.name{
 		font-size: 16px;
 		font-weight: bold;
+	}
+}
+@media(max-width:640px){
+	.reveal{
+		min-height:0px !important;
+		height: auto !important;
+		width: 90%;
+		margin:0 auto;
+		padding:15px;
+	}
+	table tbody tr:nth-child(even){
+		background: #f7f7f7;
 	}
 }
 @media(max-width:430px){

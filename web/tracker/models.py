@@ -16,7 +16,7 @@ class OneOnOne(models.Model):
 	contact = models.ForeignKey(Contact, to_field='id', null=True)
 	description = models.TextField(blank=True, null=True)
 	form_endpoint = models.URLField(max_length=2083)
-	other_enpoint = models.URLField(max_length=2083)
+	other_endpoint = models.URLField(max_length=2083)
 	date_created = models.DateTimeField(auto_now_add=True)
 	date_updated = models.DateTimeField(auto_now=True)
 

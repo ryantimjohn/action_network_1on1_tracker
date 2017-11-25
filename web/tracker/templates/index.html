@@ -20,7 +20,6 @@
 		    <input type="submit" class="button" id="submit" value="Submit">
 		  </div>
 		</div>
-		{{oneonones.count}}
 		{% if oneonones %}
 			<table id="meetings-table">
 			  <thead>
@@ -46,14 +45,16 @@
 			      		<a href="?orderby=-date_created&q={{query}}" class="sort desc"><i class="fa fa-sort-desc" aria-hidden="true"></i></a>
 			      	{% endif %}
 			      </th>
+			      <th></th>
 			    </tr>
 			  </thead>
 			  <tbody>
 			    {% for oneonone in oneonones %}
 				      <tr>
-				        <td>{{ oneonone.contact.first_name }} {{ oneonone.contact.last_name }}</td>
-				        <td>{{ oneonone.contact.email }}</td>
-				        <td>{{ oneonone.date_created }}</td>
+				        <td data-open="modal-{{oneonone.id}}">{{ oneonone.contact.first_name }} {{ oneonone.contact.last_name }}</td>
+				        <td data-open="modal-{{oneonone.id}}">{{ oneonone.contact.email }}</td>
+				        <td data-open="modal-{{oneonone.id}}">{{ oneonone.date_created }}</td>
+				        <td><a href="/one-on-one/edit/{{oneonone.id}}">Edit</a></td>
 				      </tr>
 			    {% endfor %}
 			  </tbody>
@@ -88,5 +89,18 @@
   	</div>
   </div>
 </div>
+
+{% for oneonone in oneonones %}
+<div class="reveal" id="modal-{{oneonone.id}}" data-reveal data-animation-in='slide-in-down' data-animation-out='slide-out-up'>
+  <h3>{{ oneonone.contact.first_name }} {{ oneonone.contact.last_name }}</h3>
+  <label>Email</label>
+  <p><a href="mailto:{{ oneonone.contact.email }}">{{ oneonone.contact.email }}</a></p>
+  <label>Meeting Notes</label>
+  <p>{{ oneonone.description }}</p>
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+{% endfor %}
 
 {% endblock %}
