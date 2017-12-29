@@ -8,7 +8,6 @@ name = "pypi"
 [packages]
 
 django = "*"
-mysqlclient = "*"
 pytz = "*"
 python-dotenv = "*"
 requests = "*"
