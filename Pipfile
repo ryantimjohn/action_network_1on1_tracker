@@ -1,0 +1,25 @@
+[[source]]
+
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+
+[packages]
+
+django = "*"
+pytz = "*"
+python-dotenv = "*"
+requests = "*"
+"urllib3" = "*"
+django-smtp-ssl = "*"
+"psycopg2" = "*"
+
+
+[dev-packages]
+
+
+
+[requires]
+
+python_version = "3.6"
