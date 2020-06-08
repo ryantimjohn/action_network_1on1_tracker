@@ -11,7 +11,7 @@ django = "*"
 pytz = "*"
 python-dotenv = "*"
 requests = "*"
-"urllib3" = "*"
+"urllib3" = ">=1.24.2"
 django-smtp-ssl = "*"
 "psycopg2" = "*"
 
